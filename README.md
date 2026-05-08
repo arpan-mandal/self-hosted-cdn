@@ -1,4 +1,4 @@
-# Simple File Manager
+# Self-Hosted CDN
 
 This is a self-hosted file storage system. It lets you upload, download, and organize files through a web interface. The backend uses Node.js and Express. The frontend uses plain HTML, CSS, and JavaScript. SQLite stores session data.
 
