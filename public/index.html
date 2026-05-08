@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>File Manager</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div id="login-container" class="container">
+    <div class="login-box">
+      <h1>File Storage</h1>
+      <form id="login-form">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <div id="login-error" class="error hidden"></div>
+    </div>
+  </div>
+  <div id="app-container" class="hidden">
+    <div class="main-wrapper">
+      <div class="header">
+        <h1>File Manager</h1>
+        <div class="header-info">
+          <span id="storage-usage">Storage: 0 B</span>
+          <button id="logout-btn" class="btn-secondary">Logout</button>
+        </div>
+      </div>
+      <div class="breadcrumb">
+        <button id="root-btn" class="breadcrumb-btn">Root</button>
+        <span id="breadcrumb-path"></span>
+      </div>
+      <div class="actions">
+        <button id="create-folder-btn" class="btn-primary">+ New Folder</button>
+        <div class="upload-area" id="upload-area">
+          <input type="file" id="file-input" multiple style="display: none;">
+          <button id="upload-btn" class="btn-primary">Upload Files</button>
+          <span class="drag-text">or drag & drop files here</span>
+        </div>
+      </div>
+      <div id="file-list" class="file-list">
+        <div class="file-list-header">
+          <div class="col-name">Name</div>
+          <div class="col-size">Size</div>
+          <div class="col-actions">Actions</div>
+        </div>
+        <div id="file-list-items"></div>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>Developed by <a href="https://vertos.in">Vertos</a> | <span id="footer-storage">0 B</span> used</p>
+    </footer>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
